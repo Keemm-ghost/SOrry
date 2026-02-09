@@ -1,54 +1,58 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>I'm Sorry 💛</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <main class="card">
-    <div class="badge">💌</div>
+  <main class="wrap">
+    <section class="card">
+      <div class="emoji">💌</div>
 
-    <h1 id="title">I’m really sorry</h1>
-    <p id="subtitle" class="subtitle">
-      Please read this with a soft heart.
-    </p>
+      <h1 class="title">
+        I’m sorry, <span class="name">XXX</span> 🥺
+      </h1>
 
-    <div class="note" id="note">
-      <p>
-        Hey <span id="nameSlot">you</span>… I know I messed up, and I’m genuinely sorry.
-        You mean a lot to me. I’m not here to make excuses—just to say I care, I learned,
-        and I want to do better.
+      <p class="sub" id="subText">
+        I messed up, and I’m genuinely sorry. Please read this with a soft heart.
       </p>
-      <p class="small" id="extraLine">
-        If you can, can we start fresh? 🌷
-      </p>
-    </div>
 
-    <div class="buttons">
-      <button id="yesBtn" class="btn primary">Yes, I forgive you 💖</button>
-      <button id="noBtn" class="btn ghost">No 😤</button>
-    </div>
+      <div class="messageBox" id="messageBox">
+        <p id="mainMsg">
+          You mean a lot to me, <b>XXX</b>. I’m not here to give excuses—only to say I care,
+          I regret it, and I want to do better.
+        </p>
+        <p class="small" id="extraMsg">Can you forgive me? 🌷</p>
+      </div>
 
-    <div id="progressWrap" class="progressWrap" aria-hidden="true">
-      <div class="progressBar"><div id="progress" class="progress"></div></div>
-      <div class="progressText" id="progressText">Forgiveness meter: 0%</div>
-    </div>
+      <div class="btnRow">
+        <button class="btn yes" id="yesBtn">Yes, I forgive you 💖</button>
+        <button class="btn no" id="noBtn">No 😤</button>
+      </div>
 
-    <div id="final" class="final hidden">
-      <h2>Thank you 🥺💛</h2>
-      <p id="finalText">I promise I’ll make it up to you.</p>
-      <button id="confettiBtn" class="btn primary">Celebrate 🎉</button>
-    </div>
+      <div class="meter" id="meter" aria-hidden="true">
+        <div class="bar"><div class="fill" id="fill"></div></div>
+        <div class="meterText" id="meterText">Forgiveness meter: 0%</div>
+      </div>
 
-    <footer class="footer">
-      <span class="hint">Tip: add <code>?name=Hafsa</code> to the link</span>
-    </footer>
+      <div class="final hidden" id="finalBox">
+        <h2>Thank you, <span class="name">XXX</span> 🫶</h2>
+        <p id="finalText">
+          I promise I’ll make it up to you with actions, not just words. 💛
+        </p>
+        <button class="btn yes" id="celebrateBtn">Celebrate 🎉</button>
+      </div>
+
+      <footer class="foot">
+        <span>To change the name later, replace <b>XXX</b> in the code.</span>
+      </footer>
+    </section>
   </main>
 
-  <canvas id="confetti" class="confetti" aria-hidden="true"></canvas>
+  <canvas id="confetti"></canvas>
   <script src="script.js"></script>
 </body>
 </html>
